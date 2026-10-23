@@ -175,92 +175,120 @@ const CONFIG = {
 
   // 답장을 보내면 자동으로 오는 문자
   // 자동 답장이 필요 없으면 빈칸 ""으로 두기
-  autoReplies: {
-    mio: {
-       default: [
-          "다행이다 잘 있었구나",
-          "지금 괜찮은 거 맞지?"
-          "잘 자고 내일 보자."
-       ],
-       keywords: [
-          {
-             words: ["미안", "죄송"],
-             replies: [
-                "죄송하다는 말 하지 말고"
-                "나한테 미안할 거 하나도 없으니까"
-                "너도 너한테 미안할 거 없고"
-                ]
-          },
-          {
-             words: ["괜찮"],
-             replies: ["정말 괜찮은 거 맞아?"],
-          },
-          {
-             words: ["사랑"],
-             replies: ["나도 사랑해"],
-          }
-                
-   yuu: {
-       default: [
-          "아니",
-          "ㅁㅊ 살아있었으면 대답을 좀 빨리 해줘",
-          "와진짜 걱정돼서 죽는줄알았네;",
-          "잘 있지??",
-          "전화 ㄱㄴ?",
-       ],
-       keywords: [
-          {
-             words: ["미안", "죄송"],
-             replies: [
-                "뭐가 미안한데"
-                "진짜 괜찮음 시즈 짱 잘못 없음"
-                "미안하다는 말 금지"
-                ]
-          },
-          {
-             words: ["괜찮"],
-             replies: ["안 괜찮아도 되니까 힘든 일 있으면 연락해"],
-          },
-          {
-             words: ["사랑"],
-             replies: ["여신님 저도 언제나 사랑합니다!!!!!!!"],
-          }
-    manager: "",
-    seina: {
-       default: [
-          "시즈카 짱, 지금 어디야?",
-          "전화 좀 받아 봐.",
-          "문자는 하면서 전화는 왜 안 돼.",
-          "혹시 무슨 일 있는 거야?",
-          "걱정 돼. 전화 줘.",
-       ],
-       keywords: [
-          {
-             words: ["미안", "죄송"],
-             replies: [
-                "지금 왜 사과해. 사과하지 마."
-                ]
-          },
-          {
-             words: ["괜찮"],
-             replies: [
-                "괜찮으면 잠깐 얼굴 좀 보자.",
-                "나오는 거 힘들면 통화라도 계속 하자.",
-                "기다릴 테니까.",
-             ],
-          },
-          {
-             words: ["사랑"],
-             replies: [
-                "지금 그런 말 하지 마.",
-                "나도 사랑해.",
-                "정말 사랑하는데......",
-                "지금 그 얘기 들으면, 좀 힘들어.",
-             ],
-          }
-    itsuki: "",
-    rea: ""
+autoReplies: {
+  mio: {
+    default: [
+      "다행이다 잘 있었구나",
+      "지금 괜찮은 거 맞지?",
+      "잘 자고 내일 보자."
+    ],
+    keywords: [
+      {
+        words: ["미안", "죄송"],
+        replies: [
+          "죄송하다는 말 하지 말고",
+          "나한테 미안할 거 하나도 없으니까",
+          "너도 너한테 미안할 거 없고"
+        ]
+      },
+      {
+        words: ["괜찮"],
+        replies: [
+          "정말 괜찮은 거 맞아?"
+        ]
+      },
+      {
+        words: ["사랑"],
+        replies: [
+          "나도 사랑해"
+        ]
+      }
+    ]
   },
+
+  yuu: {
+    default: [
+      "아니",
+      "ㅁㅊ 살아있었으면 대답을 좀 빨리 해줘",
+      "와진짜 걱정돼서 죽는줄알았네;",
+      "잘 있지??",
+      "전화 ㄱㄴ?"
+    ],
+    keywords: [
+      {
+        words: ["미안", "죄송"],
+        replies: [
+          "뭐가 미안한데",
+          "진짜 괜찮음 시즈 짱 잘못 없음",
+          "미안하다는 말 금지"
+        ]
+      },
+      {
+        words: ["괜찮"],
+        replies: [
+          "안 괜찮아도 되니까 힘든 일 있으면 연락해"
+        ]
+      },
+      {
+        words: ["사랑"],
+        replies: [
+          "여신님 저도 언제나 사랑합니다!!!!!!!"
+        ]
+      }
+    ]
+  },
+
+  manager: {
+    default: [],
+    keywords: []
+  },
+
+  seina: {
+    default: [
+      "시즈카 짱, 지금 어디야?",
+      "전화 좀 받아 봐.",
+      "문자는 하면서 전화는 왜 안 돼.",
+      "혹시 무슨 일 있는 거야?",
+      "걱정 돼. 전화 줘."
+    ],
+    keywords: [
+      {
+        words: ["미안", "죄송"],
+        replies: [
+          "지금 왜 사과해. 사과하지 마."
+        ]
+      },
+      {
+        words: ["괜찮"],
+        replies: [
+          "괜찮으면 잠깐 얼굴 좀 보자.",
+          "나오는 거 힘들면 통화라도 계속 하자.",
+          "기다릴 테니까."
+        ]
+      },
+      {
+        words: ["사랑"],
+        replies: [
+          "지금 그런 말 하지 마.",
+          "나도 사랑해.",
+          "정말 사랑하는데......",
+          "지금 그 얘기 들으면, 좀 힘들어."
+        ]
+      }
+    ]
+  },
+
+  itsuki: {
+    default: [],
+    keywords: []
+  },
+
+  rea: {
+    default: [],
+    keywords: []
+  }
+},
+
 
   // 첫 잠금 해제 후 자동 이벤트
   // after: 몇 초 뒤 발생할지
@@ -2734,54 +2762,95 @@ function sendMessage(text) {
   render();
   $("messageInput")?.focus();
 
-// 공백과 문장부호를 제외하고 비교
-function normalize(value) {
-  return value
-    .normalize("NFKC")
-    .replace(/[\s.,!?~。、！？…]+/g, "")
-    .toLowerCase();
+  function normalize(value) {
+    return String(value)
+      .normalize("NFKC")
+      .replace(/[\s.,!?~。、！？…]+/g, "")
+      .toLowerCase();
+  }
+
+  const rule = CONFIG.autoReplies[id];
+  const sentText = normalize(text);
+
+  const matched = rule?.keywords?.find(item => {
+    return item.words.some(word => {
+      const keyword = normalize(word);
+
+      return keyword !== "" &&
+        sentText.includes(keyword);
+    });
+  });
+
+  const reply = matched
+    ? matched.replies
+    : rule?.default;
+
+  const replies = Array.isArray(reply)
+    ? reply
+    : reply ? [reply] : [];
+
+  replies.forEach((replyText, index) => {
+    replyTimers.push(setTimeout(() => {
+      receiveMessage(id, replyText);
+    }, 1900 + index * 1800));
+  });
 }
 
-const rules = CONFIG.autoReplies[id] || {};
+function receiveMessage(id, text) {
+  const message = {
+    me: false,
+    text,
+    time: nowTime()
+  };
 
-const matchedKey = Object.keys(rules).find(key => {
-  return normalize(key) === normalize(text);
-});
+  getChat(id).push(message);
 
-const reply = matchedKey !== undefined
-  ? rules[matchedKey]
-  : null;
-
-const replies = Array.isArray(reply)
-  ? reply
-  : reply ? [reply] : [];
-
-replies.forEach((replyText, index) => {
-  replyTimers.push(setTimeout(() => {
-    receiveMessage(id, replyText);
-  }, 1900 + index * 1800));
-});
   const reading =
     view.app === "messages" &&
     view.id === id &&
     !activeCall;
 
   if (!reading) {
-    state.unread[id] = (state.unread[id] || 0) + 1;
+    state.unread[id] =
+      (state.unread[id] || 0) + 1;
   }
 
   save();
 
   if (reading) {
     const box = $("chatContent");
-    const nearBottom =
-      box.scrollHeight - box.scrollTop - box.clientHeight < 80;
 
-    box.insertAdjacentHTML("beforeend", bubbleHTML(message));
+    const nearBottom =
+      box.scrollHeight -
+      box.scrollTop -
+      box.clientHeight < 80;
+
+    box.insertAdjacentHTML(
+      "beforeend",
+      bubbleHTML(message)
+    );
 
     if (nearBottom) scrollChat();
     return;
   }
+
+  showNotification(id, text);
+
+  if (["lock", "home"].includes(view.app)) {
+    render();
+  } else if (
+    view.app === "messages" &&
+    !view.id
+  ) {
+    const query =
+      document.querySelector(
+        '[data-search="messages"]'
+      )?.value || "";
+
+    $("messageRows").innerHTML =
+      messageRows(query);
+  }
+}
 
   showNotification(id, text);
 
