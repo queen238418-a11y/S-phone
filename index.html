@@ -2852,17 +2852,6 @@ function receiveMessage(id, text) {
   }
 }
 
-  showNotification(id, text);
-
-  if (["lock", "home"].includes(view.app)) {
-    render();
-  } else if (view.app === "messages" && !view.id) {
-    const query =
-      document.querySelector('[data-search="messages"]')?.value || "";
-
-    $("messageRows").innerHTML = messageRows(query);
-  }
-}
 
 function showNotification(id, text) {
   notificationTarget = id;
