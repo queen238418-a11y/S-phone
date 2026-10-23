@@ -63,7 +63,7 @@ const CONFIG = {
       name: "매니저 님",
       callLines: [
          "시즈카 씨, 지금 어디세요?",
-         "전화가 안 돼서 걱정했어요.  ...집이라고요? 본가요?",
+         "전화가 안 돼서 걱정했어요. \n ...집이라고요? 본가요?",
          "지금 기자들 깔려 있을 텐데요.",
          "일단 지금 집 안이시죠? \n 웬만하면 밖으로 나오지 마시고요.",
          "......사과하지 마세요.",
@@ -130,7 +130,7 @@ const CONFIG = {
     mio: [
       {
         me: false,
-        text: "여기에 받은 문자 내용을 입력해.",
+        text: "시즈카. 잠깐 통화 가능해?",
         time: "2:50"
       },
       {
@@ -140,25 +140,124 @@ const CONFIG = {
       }
     ],
     yuu: [
-      {
-        me: false,
-        text: "기존 대화 내용을 여기에 입력해.",
-        time: "2:10"
-      }
+      { me: false, text: "시즈 짱", time: "2:50" },
+      { me: false, text: "지금 어디임", time: "2:50" },
+      { me: false, text: "ㅇㄷ", time: "2:50" },
+      { me: false, text: "ㅇㄷㅇㄷㅇㄷㅇㄷ", time: "2:50" },
+      { me: false, text: "뭐하는데", time: "2:50" },
+      { me: false, text: "전화는 왜 안 받음", time: "2:50" },
+      { me: false, text: "전화 좀 받아봐", time: "2:50" },
+      { me: false, text: "뭐하냐고", time: "2:50" },
     ],
-    shizuka: [],
-    seina: [],
-    itsuki: [],
-    rea: []
+    manager: [
+       { me: false, text: "시즈카 씨. 회사 측 대응 관련해서 얘기할 내용이 있는데 내일 얘기 가능하실까요", time: "12:50" },
+       { me: false, text: "답장 보시는 대로 회신 부탁드리겠습니다.", time: "12:50" },
+       { me: false, text: "시즈카 씨", time: "2:50" },
+       { me: false, text: "연락 남겨 주세요", time: "2:50" },
+    ],
+    seina: [
+       { me: false, text: "시즈카 짱, 지금 어디야?", time: "2:50" },
+       { me: false, text: "나, 지금 시즈카 짱 집 근처에 있어.", time: "2:50" },
+       { me: false, text: "잠깐만 나와줘.", time: "2:50" },
+       { me: false, text: "시즈카 짱. 확인하는 대로 전화 줘.", time: "2:50" },
+    ],
+    itsuki: [
+       { me: false, text: "어디 갔냐", time: "2:50" },
+       { me: false, text: "전화 돼?", time: "2:50" },
+    ],
+    rea: [
+       { me: false, text: "언니 어디야???????", time: "2:50" },
+       { me: false, text: "어디 갔어????", time: "2:50" },
+       { me: false, text: "지금 다 언니 찾고 잇어 ㅠㅠ", time: "2:50" },
+       { me: false, text: "진짜 어디야?", time: "2:50" },
+    ]
   },
 
   // 답장을 보내면 자동으로 오는 문자
   // 자동 답장이 필요 없으면 빈칸 ""으로 두기
   autoReplies: {
-    mio: "여기에 자동 답장 내용을 입력해.",
-    yuu: "",
-    shizuka: "",
-    seina: "",
+    mio: {
+       default: [
+          "다행이다 잘 있었구나",
+          "지금 괜찮은 거 맞지?"
+          "잘 자고 내일 보자."
+       ],
+       keywords: [
+          {
+             words: ["미안", "죄송"],
+             replies: [
+                "죄송하다는 말 하지 말고"
+                "나한테 미안할 거 하나도 없으니까"
+                "너도 너한테 미안할 거 없고"
+                ]
+          },
+          {
+             words: ["괜찮"],
+             replies: ["정말 괜찮은 거 맞아?"],
+          },
+          {
+             words: ["사랑"],
+             replies: ["나도 사랑해"],
+          }
+                
+   yuu: {
+       default: [
+          "아니",
+          "ㅁㅊ 살아있었으면 대답을 좀 빨리 해줘",
+          "와진짜 걱정돼서 죽는줄알았네;",
+          "잘 있지??",
+          "전화 ㄱㄴ?",
+       ],
+       keywords: [
+          {
+             words: ["미안", "죄송"],
+             replies: [
+                "뭐가 미안한데"
+                "진짜 괜찮음 시즈 짱 잘못 없음"
+                "미안하다는 말 금지"
+                ]
+          },
+          {
+             words: ["괜찮"],
+             replies: ["안 괜찮아도 되니까 힘든 일 있으면 연락해"],
+          },
+          {
+             words: ["사랑"],
+             replies: ["여신님 저도 언제나 사랑합니다!!!!!!!"],
+          }
+    manager: "",
+    seina: {
+       default: [
+          "시즈카 짱, 지금 어디야?",
+          "전화 좀 받아 봐.",
+          "문자는 하면서 전화는 왜 안 돼.",
+          "혹시 무슨 일 있는 거야?",
+          "걱정 돼. 전화 줘.",
+       ],
+       keywords: [
+          {
+             words: ["미안", "죄송"],
+             replies: [
+                "지금 왜 사과해. 사과하지 마."
+                ]
+          },
+          {
+             words: ["괜찮"],
+             replies: [
+                "괜찮으면 잠깐 얼굴 좀 보자.",
+                "나오는 거 힘들면 통화라도 계속 하자.",
+                "기다릴 테니까.",
+             ],
+          },
+          {
+             words: ["사랑"],
+             replies: [
+                "지금 그런 말 하지 마.",
+                "나도 사랑해.",
+                "정말 사랑하는데......",
+                "지금 그 얘기 들으면, 좀 힘들어.",
+             ],
+          }
     itsuki: "",
     rea: ""
   },
@@ -2637,11 +2736,15 @@ function sendMessage(text) {
 
   const reply = CONFIG.autoReplies[id];
 
-  if (reply) {
-    replyTimers.push(setTimeout(() => {
-      receiveMessage(id, reply);
-    }, 1900));
-  }
+const replies = Array.isArray(reply)
+  ? reply
+  : reply ? [reply] : [];
+
+replies.forEach((text, index) => {
+  replyTimers.push(setTimeout(() => {
+    receiveMessage(id, text);
+  }, 1900 + index * 1800));
+});
 }
 
 function receiveMessage(id, text) {
