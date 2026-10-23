@@ -2734,28 +2734,33 @@ function sendMessage(text) {
   render();
   $("messageInput")?.focus();
 
-  const reply = CONFIG.autoReplies[id];
+// 공백과 문장부호를 제외하고 비교
+function normalize(value) {
+  return value
+    .normalize("NFKC")
+    .replace(/[\s.,!?~。、！？…]+/g, "")
+    .toLowerCase();
+}
+
+const rules = CONFIG.autoReplies[id] || {};
+
+const matchedKey = Object.keys(rules).find(key => {
+  return normalize(key) === normalize(text);
+});
+
+const reply = matchedKey !== undefined
+  ? rules[matchedKey]
+  : null;
 
 const replies = Array.isArray(reply)
   ? reply
   : reply ? [reply] : [];
 
-replies.forEach((text, index) => {
+replies.forEach((replyText, index) => {
   replyTimers.push(setTimeout(() => {
-    receiveMessage(id, text);
+    receiveMessage(id, replyText);
   }, 1900 + index * 1800));
 });
-}
-
-function receiveMessage(id, text) {
-  const message = {
-    me: false,
-    text,
-    time: nowTime()
-  };
-
-  getChat(id).push(message);
-
   const reading =
     view.app === "messages" &&
     view.id === id &&
