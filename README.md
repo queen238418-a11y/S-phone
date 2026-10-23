@@ -16,7 +16,7 @@ const CONFIG = {
 
   // 배경 사진을 올렸다면 정확한 파일 이름 입력
   // 예: wallpaper: "다운로드 (9).jpg"
-  wallpaper: "",
+  wallpaper: "다운로드 (9).jpg",
 
   carrier: "SKT",
   battery: 70,
@@ -37,8 +37,7 @@ const CONFIG = {
   contacts: [
     {
       id: "mio",
-      name: "미오",
-      emoji: "🦊",
+      name: "미오 씨",
       number: "09000000001",
       callLines: [
         "여기에 통화 대사를 입력해.",
@@ -48,24 +47,21 @@ const CONFIG = {
     },
     {
       id: "yuu",
-      name: "유우",
-      emoji: "🦔",
+      name: "유우 씨",
       number: "09000000002",
       callLines: ["유우의 통화 대사를 입력해."],
       audio: ""
     },
     {
-      id: "shizuka",
-      name: "시즈카",
-      emoji: "🦌",
+      id: "manager",
+      name: "매니저 님",
       number: "09000000003",
       callLines: ["시즈카의 통화 대사를 입력해."],
       audio: ""
     },
     {
       id: "seina",
-      name: "세이나",
-      emoji: "🐇",
+      name: "세이나 씨",
       number: "09000000004",
       callLines: ["세이나의 통화 대사를 입력해."],
       audio: ""
@@ -73,7 +69,6 @@ const CONFIG = {
     {
       id: "itsuki",
       name: "이츠키",
-      emoji: "🐺",
       number: "09000000005",
       callLines: ["이츠키의 통화 대사를 입력해."],
       audio: ""
@@ -81,7 +76,6 @@ const CONFIG = {
     {
       id: "rea",
       name: "레아",
-      emoji: "🐶",
       number: "09000000006",
       callLines: ["레아의 통화 대사를 입력해."],
       audio: ""
