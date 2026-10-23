@@ -48,7 +48,7 @@ const CONFIG = {
     },
     {
       id: "yuu",
-      name: "유우",
+      name: "유우 씨",
       callLines: [
          "시즈 짱? 어디야?",
          "...본가라고? 지금 새벽 두 신데?",
@@ -92,7 +92,7 @@ const CONFIG = {
     },
     {
       id: "itsuki",
-      name: "이츠키",
+      name: "이츠키 씨",
       callLines: [
          "사카하기. 어디야.",
          "...말은 하고 가지.",
@@ -107,7 +107,7 @@ const CONFIG = {
     },
     {
       id: "rea",
-      name: "레아",
+      name: "레아 씨",
       callLines: [
          "시즈카 언니, 어디야!?",
          "지금 완전 늦었어! 나 잘 시간인데!",
@@ -3506,7 +3506,7 @@ function answerCall() {
         const paragraph = document.createElement("p");
         paragraph.textContent = line;
 
-        $("callScript").append(paragraph);
+        $("callScript").replaceChildren(paragraph);
         $("callScript").scrollTop = $("callScript").scrollHeight;
       }, 700 + index * 3500)
     );
