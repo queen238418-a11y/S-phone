@@ -18,7 +18,7 @@ const CONFIG = {
   // 예: wallpaper: "다운로드 (9).jpg"
   wallpaper: "다운로드 (9).jpg",
 
-  carrier: "SKT",
+  carrier: "SKY",
   battery: 70,
 
   // 잠금화면 글자와 상단 아이콘 색
@@ -38,7 +38,6 @@ const CONFIG = {
     {
       id: "mio",
       name: "미오 씨",
-      number: "09000000001",
       callLines: [
         "여기에 통화 대사를 입력해.",
         "이렇게 한 줄씩 순서대로 나타나."
@@ -48,35 +47,30 @@ const CONFIG = {
     {
       id: "yuu",
       name: "유우 씨",
-      number: "09000000002",
       callLines: ["유우의 통화 대사를 입력해."],
       audio: ""
     },
     {
       id: "manager",
       name: "매니저 님",
-      number: "09000000003",
       callLines: ["시즈카의 통화 대사를 입력해."],
       audio: ""
     },
     {
       id: "seina",
       name: "세이나 씨",
-      number: "09000000004",
       callLines: ["세이나의 통화 대사를 입력해."],
       audio: ""
     },
     {
       id: "itsuki",
       name: "이츠키",
-      number: "09000000005",
       callLines: ["이츠키의 통화 대사를 입력해."],
       audio: ""
     },
     {
       id: "rea",
       name: "레아",
-      number: "09000000006",
       callLines: ["레아의 통화 대사를 입력해."],
       audio: ""
     }
